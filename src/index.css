@@ -215,6 +215,7 @@ img {
   font-size: var(--small-font-size);
   color: var(--title-color);
   font-weight: var(--font-medium);
+  transition: .3s;
 }
 
 .nav__link:hover {
@@ -244,15 +245,20 @@ img {
 }
 
 .home__content {
-  grid-template-columns: .5fr 3fr;
+  grid-template-columns: 1fr;
+  /* Mobile first: stack vertically */
   padding-top: 3.5rem;
   align-items: center;
+  gap: 2rem;
 }
 
 .home__social {
-  display: grid;
-  grid-template-columns: max-content;
-  row-gap: 1rem;
+  display: flex;
+  /* Mobile: horizontal */
+  justify-content: center;
+  column-gap: 1.25rem;
+  order: 3;
+  /* Move to bottom on mobile */
 }
 
 .home__social-icon {
@@ -289,6 +295,20 @@ img {
 .home__img-wrapper {
   display: flex;
   justify-content: center;
+  order: 1;
+  /* Move to top on mobile */
+}
+
+.home__data {
+  color: var(--title-color);
+  text-align: center;
+  /* Center text on mobile */
+  order: 2;
+}
+
+.home__data .button {
+  margin: 0 auto;
+  /* Center button */
 }
 
 .home__blob {
@@ -764,35 +784,59 @@ img {
     padding-top: 2rem 0.25rem 4rem;
   }
 
-  .home__content {
-    grid-template-columns: .25fr 3fr;
-  }
-
   .home__blob {
     width: 180px;
     height: 180px;
   }
+
+  .about__info {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .skills__box {
+    column-gap: 1.5rem;
+  }
 }
 
 /* Medium devices */
-@media screen and (min-width: 568px) {
+@media screen and (min-width: 576px) {
   .home__content {
     grid-template-columns: max-content 1fr 1fr;
+    /* Restore 3 column layout */
+    padding-top: 5.5rem;
+    column-gap: 2rem;
   }
 
-  .home__data {
-    grid-column: initial;
+  .home__social {
+    display: grid;
+    /* Vertical stack again */
+    grid-template-columns: max-content;
+    row-gap: 1rem;
+    order: initial;
+    justify-content: initial;
   }
 
   .home__img-wrapper {
-    order: 1;
-    justify-content: center;
+    order: initial;
   }
 
+  .home__data {
+    text-align: initial;
+    order: initial;
+  }
+
+  .home__data .button {
+    margin: 0;
+  }
+
+  .about__container,
   .skills__container,
   .projects__container,
   .contact__container,
   .footer__container {
+    /* Allow grid to handle columns differently if needed, but 2 col is fine */
     grid-template-columns: repeat(2, 1fr);
   }
 }
