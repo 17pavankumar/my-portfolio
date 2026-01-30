@@ -9,7 +9,7 @@ const About = () => {
             <div className="about__container container grid">
                 <div className="about__data">
                     <p className="about__description">
-                        I am a self-motivated B.E. graduate in Electronics and Communication from Sir M Visvesvaraya Institute of Technology (2021-2025). <br /><br />
+                        I am a self-motivated B.E. graduate from Sir M Visvesvaraya Institute of Technology (2021-2025). <br /><br />
                         I have hands-on experience in developing scalable web applications using <strong>Python, Django, React.js, and SQL</strong>.
                         My passion lies in completing full development lifecycle projects, from design to deployment, solving complex problems with innovative software solutions.
                     </p>

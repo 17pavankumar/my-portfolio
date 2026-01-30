@@ -63,14 +63,14 @@ const Skills = () => {
                                 <i className="fa-brands fa-python"></i>
                                 <div>
                                     <h3 className="skills__name">Python</h3>
-                                    <span className="skills__level">Advanced</span>
+                                    <span className="skills__level">Intermediate</span>
                                 </div>
                             </div>
                             <div className="skills__data">
                                 <i className="fa-solid fa-server"></i>
                                 <div>
                                     <h3 className="skills__name">Django</h3>
-                                    <span className="skills__level">Advanced</span>
+                                    <span className="skills__level">Intermediate</span>
                                 </div>
                             </div>
                             <div className="skills__data">
