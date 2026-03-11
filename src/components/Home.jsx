@@ -12,7 +12,7 @@ const Home = () => {
                         <a href="https://www.linkedin.com/in/pavan-kumar-n-135b3825b/" className="home__social-icon" target="_blank" rel="noreferrer">
                             <i className="fa-brands fa-linkedin-in"></i>
                         </a>
-                        <a href="mailto:17pavankumarn@gmail.com" className="home__social-icon">
+                        <a href="mailto:pavankumarn.info@gmail.com" className="home__social-icon">
                             <i className="fa-solid fa-envelope"></i>
                         </a>
                     </div>
